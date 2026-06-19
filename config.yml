@@ -8,21 +8,7 @@ phone: "(954) 858-6702"
 phone_raw: "9548586702"
 address: "984 NW 127th Ave, Coral Springs, FL 33071"
 
-hours:
-  - day: "Monday"
-    time: "7:00 AM - 7:00 PM"
-  - day: "Tuesday"
-    time: "7:00 AM - 7:00 PM"
-  - day: "Wednesday"
-    time: "7:00 AM - 7:00 PM"
-  - day: "Thursday"
-    time: "7:00 AM - 7:00 PM"
-  - day: "Friday"
-    time: "7:00 AM - 7:00 PM"
-  - day: "Saturday"
-    time: "7:00 AM - 7:00 PM"
-  - day: "Sunday"
-    time: "7:00 AM - 7:00 PM"
+
 
 social:
   facebook: "https://www.facebook.com/profile.php?id=61576387686308"
