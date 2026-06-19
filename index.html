@@ -1,1 +1,152 @@
+---
+layout: default
+title: Home
+description: Professional pressure washing and soft washing for homes and businesses across South Florida. Driveways, roofs, gutters, and more. Call for a free estimate.
+---
 
+<section class="hero">
+  <div class="hero__image-wrap">
+    <img src="{{ '/Images/RPWHero.webp' | relative_url }}" alt="Ronin Pressure Washing trailer rig parked and ready for a job in South Florida">
+    <div class="hero__scrim"></div>
+    <div class="hero__content wrap">
+      <div class="hero__eyebrow">Residential &amp; Commercial &middot; South Florida</div>
+      <h1>Elevating your property's <span>shine</span>, one wash at a time</h1>
+      <p class="hero__sub">Ronin Pressure Washing tackles tough stains, mold, and grime with advanced equipment, so your driveway, roof, and home look the way they did on day one.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="tel:{{ site.phone_raw }}">Call {{ site.phone }}</a>
+        <a class="btn btn--ghost" href="{{ '/contact/' | relative_url }}">Get a free estimate</a>
+      </div>
+      <div class="hero__open-badge">
+        <span class="dot"></span>
+        Open 24 hours, every day, including weekends
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-strip">
+  <div class="wrap">
+    <div class="trust-item">
+      <strong>24/7</strong>
+      <span>Availability</span>
+    </div>
+    <div class="trust-item">
+      <strong>5.0</strong>
+      <span>Average rating</span>
+    </div>
+    <div class="trust-item">
+      <strong>100%</strong>
+      <span>Satisfaction focus</span>
+    </div>
+    <div class="trust-item">
+      <strong>Free</strong>
+      <span>Estimates</span>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">What we do</div>
+      <h2>Built for South Florida grime</h2>
+      <p>Heat, humidity, and rain leave their mark fast around here. Our team uses commercial-grade equipment and the right pressure for every surface, so you get a clean result without any damage.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card__icon">&#128167;</div>
+        <h3>Driveway &amp; Paver Cleaning</h3>
+        <p>Lift years of dirt, oil, and algae from concrete and pavers, and bring the original color back.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">&#127968;</div>
+        <h3>Soft Washing</h3>
+        <p>Low-pressure, detergent-based cleaning for siding, stucco, and roofs that removes mold without harming the surface.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">&#128230;</div>
+        <h3>Gutter &amp; Fascia Cleaning</h3>
+        <p>Clear out buildup and streaking along gutters and fascia boards so water flows the way it should.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">&#127970;</div>
+        <h3>Commercial Properties</h3>
+        <p>Storefronts, sidewalks, and shared spaces cleaned on a schedule that works around your business hours.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">&#128737;&#65039;</div>
+        <h3>Roof Cleaning</h3>
+        <p>Remove black streaks and algae safely, extending the life of your roof and improving curb appeal.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">&#9971;&#65039;</div>
+        <h3>Fences &amp; Decks</h3>
+        <p>Restore wood and vinyl fencing, decks, and patios so outdoor spaces look like they're ready for guests.</p>
+      </div>
+    </div>
+
+    <a class="view-all-link" href="{{ '/services/' | relative_url }}">See all services &rarr;</a>
+  </div>
+</section>
+
+<section class="section--dark">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Recent work</div>
+      <h2>See the difference for yourself</h2>
+      <p>A look at jobs we've completed around South Florida.</p>
+    </div>
+
+    <div class="gallery-grid">
+      {% assign home_gallery = site.data.gallery | slice: 0, 6 %}
+      {% for image in home_gallery %}
+      <figure>
+        <img src="{{ '/Images/' | append: image.src | relative_url }}" alt="{{ image.caption }}" loading="lazy">
+        <figcaption>{{ image.caption }}</figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+
+    <a class="view-all-link" href="{{ '/gallery/' | relative_url }}">View full gallery &rarr;</a>
+  </div>
+</section>
+
+<section class="spray-streak"></section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head text-center" style="margin-left:auto; margin-right:auto;">
+      <div class="section-eyebrow">Customer reviews</div>
+      <h2>What South Florida is saying</h2>
+    </div>
+
+    <div class="reviews-grid">
+      {% assign home_reviews = site.data.reviews | slice: 0, 3 %}
+      {% for review in home_reviews %}
+      <div class="review-card">
+        <div class="review-card__stars">
+          {% for i in (1..review.stars) %}&#9733;{% endfor %}{% assign empty_stars = 5 | minus: review.stars %}{% for i in (1..empty_stars) %}&#9734;{% endfor %}
+        </div>
+        <p>{{ review.text }}</p>
+        <div class="review-card__name">{{ review.person }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="text-center">
+      <a class="view-all-link" href="{{ '/reviews/' | relative_url }}">Read all reviews &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready for a cleaner, brighter property?</h2>
+    <p>Call now or send us a few details and we'll get back to you with a free estimate.</p>
+    <div class="hero__actions" style="justify-content:center;">
+      <a class="btn btn--dark" href="tel:{{ site.phone_raw }}">Call {{ site.phone }}</a>
+      <a class="btn btn--ghost" href="{{ '/contact/' | relative_url }}">Request a free estimate</a>
+    </div>
+  </div>
+</section>
