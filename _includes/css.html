@@ -1002,15 +1002,11 @@ section.spray-streak {
    ABOUT PREVIEW (home page)
    ============================================ */
 .area-preview .wrap {
-    display: flex;
-    
-    gap: 48px;
-    align-items: center;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
 }
-
 
 .about-preview__image {
   position: relative;
