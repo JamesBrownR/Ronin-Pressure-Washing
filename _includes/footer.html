@@ -1,40 +1,54 @@
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-col">
-      <img src="{{ '/Images/RPWLogo.webp' | relative_url }}" alt="Ronin Pressure Washing logo" class="footer-logo">
-      <p>{{ site.description }}</p>
-    </div>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="{{ '/Images/RPWLogo.webp' | relative_url }}" alt="Ronin Pressure Washing logo">
+          Ronin Pressure Washing
+        </div>
+        <p>Professional pressure washing and soft washing for homes and businesses across South Florida. Licensed, insured, and ready when you are.</p>
+        <div class="footer-social">
+          <a href="{{ site.social.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+          <a href="{{ site.social.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+          <a href="{{ site.social.tiktok }}" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+          <a href="{{ site.social.yelp }}" target="_blank" rel="noopener" aria-label="Yelp">YP</a>
+        </div>
+      </div>
 
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <p><a href="tel:{{ site.phone_raw }}">{{ site.phone }}</a></p>
-      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-      <p>{{ site.address }}</p>
-    </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
+          <li><a href="{{ '/services-areas/' | relative_url }}">Service Areas</a></li>
+          <li><a href="{{ '/gallery/' | relative_url }}">Gallery</a></li>
+          <li><a href="{{ '/reviews/' | relative_url }}">Reviews</a></li>
+        </ul>
+      </div>
 
-    <div class="footer-col">
-      <h4>Hours</h4>
-      <ul class="hours-list">
-        {% for h in site.hours %}
-        <li><span>{{ h.day }}</span><span>{{ h.time }}</span></li>
-        {% endfor %}
-      </ul>
-    </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:{{ site.phone_raw }}">{{ site.phone }}</a></li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li>{{ site.address }}</li>
+        </ul>
+      </div>
 
-    <div class="footer-col">
-      <h4>Follow Us</h4>
-      <div class="social-links">
-        <a href="{{ site.social.facebook }}" target="_blank" rel="noopener">Facebook</a>
-        <a href="{{ site.social.instagram }}" target="_blank" rel="noopener">Instagram</a>
-        <a href="{{ site.social.tiktok }}" target="_blank" rel="noopener">TikTok</a>
-        <a href="{{ site.social.yelp }}" target="_blank" rel="noopener">Yelp</a>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li>Open 24 hours</li>
+          <li>Every day of the week</li>
+          <li><a href="{{ '/contact/' | relative_url }}">Get a free estimate</a></li>
+        </ul>
       </div>
     </div>
-  </div>
 
-  <div class="footer-bottom">
-    <div class="container">
-      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    <div class="footer-bottom">
+      <span>&copy; {{ site.time | date: '%Y' }} Ronin Pressure Washing. All rights reserved.</span>
+      <span>Coral Springs, FL and surrounding areas</span>
     </div>
   </div>
 </footer>
