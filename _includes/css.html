@@ -1001,22 +1001,20 @@ section.spray-streak {
 /* ============================================
    ABOUT PREVIEW (home page)
    ============================================ */
-.area-preview .wrap {
-    display: flex;
-    
-    gap: 48px;
-    align-items: center;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: center;
+.about-preview .wrap {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: center;
 }
-
 
 .about-preview__image {
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
   aspect-ratio: 4 / 5;
+  max-width: 420px;
+  width: 100%;
 }
 
 .about-preview__image img {
@@ -1051,7 +1049,7 @@ section.spray-streak {
   }
   .about-preview__image {
     aspect-ratio: 16 / 10;
-    max-width: 420px;
+    max-width: 100%;
   }
 }
 
