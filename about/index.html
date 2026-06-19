@@ -1,1 +1,232 @@
+---
+layout: default
+title: About
+description: Meet Ozzy and the Ronin Pressure Washing team. A family-run pressure washing company built on doing the job right every time, serving South Florida since day one.
+---
 
+<section class="page-header">
+  <div class="wrap">
+    <div class="section-eyebrow">Who we are</div>
+    <h1>About Ronin Pressure Washing</h1>
+    <p>A family-run operation out of Coral Springs, built on the idea that good work speaks for itself.</p>
+  </div>
+</section>
+
+<section class="about-story">
+  <div class="wrap about-story__grid">
+    <div class="about-story__image">
+      <img src="{{ '/Images/RPWAbout.webp' | relative_url }}" alt="Ozzy from Ronin Pressure Washing on the job in South Florida" loading="lazy">
+    </div>
+    <div class="about-story__copy">
+      <div class="section-eyebrow">The story</div>
+      <h2>Built on doing it right</h2>
+      <p>Ronin Pressure Washing was started by Ozzy with a single goal: bring real professional-grade cleaning to South Florida properties without the runaround, the upsells, or the shortcuts. The name says it all. A ronin works with discipline and without excuses.</p>
+      <p>Every job gets the same attention whether it's a single driveway or a full commercial property. Ozzy and the team show up on time, communicate clearly, use the right equipment for each surface, and leave the property cleaner than they found it. That approach has earned every five-star review on the board.</p>
+      <p>Father and son, working together. Licensed, insured, and ready to get it done.</p>
+    </div>
+  </div>
+</section>
+
+<div class="spray-streak"></div>
+
+<section class="about-values section--alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">How we work</div>
+      <h2>The Ronin standard</h2>
+      <p>A few things that set us apart from the next guy on the list.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-card__num">01</div>
+        <h3>Right method for the surface</h3>
+        <p>High pressure on concrete. Low pressure soft wash on roofs and stucco. We don't use one setting for everything and call it done. The wrong method damages surfaces and voids warranties.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card__num">02</div>
+        <h3>We protect what's around the job</h3>
+        <p>Plants, furniture, vehicles, and anything else near the work area gets covered or moved before we start. We put it all back when we leave.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card__num">03</div>
+        <h3>Clear communication, start to finish</h3>
+        <p>You'll know when we're coming, what we're doing, and what to expect. We send before-and-after photos and follow up to make sure you're satisfied.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card__num">04</div>
+        <h3>No upsells, no surprises on price</h3>
+        <p>The estimate you get is the price you pay. We'll flag anything we notice during the job, like a cracked roof tile, but we won't pressure you into adding things you don't need.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-equipment">
+  <div class="wrap about-equipment__grid">
+    <div class="about-equipment__copy">
+      <div class="section-eyebrow">The rig</div>
+      <h2>Commercial-grade equipment</h2>
+      <p>We run a fully self-contained trailer rig with a dedicated water tank. That means we're not dependent on your water supply, we can handle large jobs without interruption, and the pressure is consistent from the first pass to the last.</p>
+      <p>South Florida's heat, salt air, and year-round rain create tough conditions. The algae and mold growth here is aggressive. Our equipment is built for it.</p>
+    </div>
+    <div class="about-equipment__image">
+      <img src="{{ '/Images/RPW1.webp' | relative_url }}" alt="Ronin Pressure Washing trailer rig parked and ready for a South Florida job" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready to see the difference?</h2>
+    <p>Get a free estimate with no obligation. We'll get back to you the same day.</p>
+    <div class="hero__actions" style="justify-content:center;">
+      <a class="btn btn--dark" href="tel:{{ site.phone_raw }}">Call {{ site.phone }}</a>
+      <a class="btn btn--ghost" href="{{ '/contact/' | relative_url }}">Request a free estimate</a>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ============================================
+   ABOUT PAGE STYLES
+   ============================================ */
+
+.about-story {
+  padding: 72px 0;
+}
+
+.about-story__grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-story__image {
+  border-radius: 2px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  max-width: 440px;
+  width: 100%;
+}
+
+.about-story__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-story__copy h2 {
+  font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  margin-bottom: 18px;
+}
+
+.about-story__copy p {
+  color: var(--slate);
+  font-size: 1.02rem;
+}
+
+@media (max-width: 860px) {
+  .about-story__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-story__image {
+    aspect-ratio: 16 / 10;
+    max-width: 100%;
+  }
+}
+
+/* Values grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.value-card {
+  background: var(--concrete);
+  border: 1px solid var(--concrete-dim);
+  padding: 32px 28px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.value-card__num {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--concrete-dim);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.value-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  color: var(--slate);
+  font-size: 0.94rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Equipment section */
+.about-equipment {
+  background: var(--charcoal);
+  color: var(--concrete);
+  padding: 72px 0;
+}
+
+.about-equipment__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-equipment__copy .section-eyebrow {
+  color: var(--ronin-red);
+}
+
+.about-equipment__copy h2 {
+  font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  margin-bottom: 18px;
+}
+
+.about-equipment__copy p {
+  color: var(--slate-light);
+  font-size: 1.02rem;
+}
+
+.about-equipment__image {
+  border-radius: 2px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  max-width: 460px;
+  width: 100%;
+}
+
+.about-equipment__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 860px) {
+  .about-equipment__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-equipment__image {
+    max-width: 100%;
+    order: -1;
+  }
+}
+</style>
