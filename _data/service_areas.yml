@@ -1,1 +1,27 @@
 
+# Add new entries in this format. "slug" will be used later for
+# individual area pages and area + service combination pages,
+# for example /service-areas/coral-springs-fl/roof-cleaning/
+- name: "Coral Springs, FL"
+  slug: "coral-springs-fl"
+
+- name: "Parkland, FL"
+  slug: "parkland-fl"
+
+- name: "Coconut Creek, FL"
+  slug: "coconut-creek-fl"
+
+- name: "Margate, FL"
+  slug: "margate-fl"
+
+- name: "Tamarac, FL"
+  slug: "tamarac-fl"
+
+- name: "Sunrise, FL"
+  slug: "sunrise-fl"
+
+- name: "Plantation, FL"
+  slug: "plantation-fl"
+
+- name: "Pompano Beach, FL"
+  slug: "pompano-beach-fl"
