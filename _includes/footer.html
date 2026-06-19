@@ -1,1 +1,40 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <img src="{{ '/Images/RPWLogo.webp' | relative_url }}" alt="Ronin Pressure Washing logo" class="footer-logo">
+      <p>{{ site.description }}</p>
+    </div>
 
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p><a href="tel:{{ site.phone_raw }}">{{ site.phone }}</a></p>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p>{{ site.address }}</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <ul class="hours-list">
+        {% for h in site.hours %}
+        <li><span>{{ h.day }}</span><span>{{ h.time }}</span></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="{{ site.social.facebook }}" target="_blank" rel="noopener">Facebook</a>
+        <a href="{{ site.social.instagram }}" target="_blank" rel="noopener">Instagram</a>
+        <a href="{{ site.social.tiktok }}" target="_blank" rel="noopener">TikTok</a>
+        <a href="{{ site.social.yelp }}" target="_blank" rel="noopener">Yelp</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
