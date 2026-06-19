@@ -1,1 +1,115 @@
+---
+layout: default
+title: Home
+description: Professional pressure washing and soft washing for homes and businesses across South Florida. Driveways, roofs, gutters, and more.
+---
 
+<section class="hero" style="background-image: url('{{ '/Images/RPWHero.webp' | relative_url }}');">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <h1>Elevating Your Property's Shine</h1>
+    <p class="hero-sub">Professional pressure washing and soft washing for residential and commercial properties in South Florida.</p>
+    <div class="hero-actions">
+      <a href="tel:{{ site.phone_raw }}" class="btn btn-primary">Call {{ site.phone }}</a>
+      <a href="{{ '/contact/' | relative_url }}" class="btn btn-secondary">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="section intro">
+  <div class="container">
+    <h2>South Florida's Trusted Pressure Washing Team</h2>
+    <p>Ronin Pressure Washing specializes in professional pressure washing services for residential and commercial spaces. Our skilled team uses advanced equipment to tackle tough stains, mold, and grime, restoring the beauty of your surfaces. Trust Ronin Pressure Washing for a cleaner, brighter, and more inviting property.</p>
+    <p>Customer satisfaction is our priority, and we take pride in delivering quality results every time.</p>
+  </div>
+</section>
+
+<section class="section services-preview">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Driveway &amp; Paver Cleaning</h3>
+        <p>Lift years of dirt and stains out of concrete and pavers and bring back that fresh, like-new look.</p>
+      </div>
+      <div class="card">
+        <h3>Soft Washing</h3>
+        <p>Low-pressure cleaning for roofs, siding, and gutters that removes mold and grime without causing damage.</p>
+      </div>
+      <div class="card">
+        <h3>House Washing</h3>
+        <p>A full exterior wash that instantly boosts curb appeal for your home or business.</p>
+      </div>
+      <div class="card">
+        <h3>Commercial Pressure Washing</h3>
+        <p>Keep storefronts, sidewalks, and parking areas clean and welcoming for customers.</p>
+      </div>
+    </div>
+    <a href="{{ '/services/' | relative_url }}" class="link-more">See all services</a>
+  </div>
+</section>
+
+<section class="section gallery-preview">
+  <div class="container">
+    <h2>Recent Work</h2>
+    <div class="gallery-grid">
+      {% for item in site.data.gallery limit:6 %}
+      <div class="gallery-item">
+        <img src="{{ '/Images/' | append: item.src | relative_url }}" alt="{{ item.caption }}" loading="lazy">
+      </div>
+      {% endfor %}
+    </div>
+    <a href="{{ '/gallery/' | relative_url }}" class="link-more">View full gallery</a>
+  </div>
+</section>
+
+<section class="section reviews-preview">
+  <div class="container">
+    <h2>What Customers Are Saying</h2>
+    <div class="reviews-grid">
+      {% for review in site.data.reviews limit:3 %}
+      <div class="review-card">
+        <div class="stars">
+          {% for i in (1..review.stars) %}&#9733;{% endfor %}
+        </div>
+        <p class="review-text">{{ review.text }}</p>
+        <p class="review-person">{{ review.person }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <a href="{{ '/reviews/' | relative_url }}" class="link-more">Read all reviews</a>
+  </div>
+</section>
+
+<section class="section cta-strip">
+  <div class="container cta-strip-inner">
+    <h2>Ready for a cleaner property?</h2>
+    <p>Call or send a message today and get a free estimate.</p>
+    <div class="hero-actions">
+      <a href="tel:{{ site.phone_raw }}" class="btn btn-primary">Call {{ site.phone }}</a>
+      <a href="{{ '/contact/' | relative_url }}" class="btn btn-secondary">Request a Quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="section contact-preview">
+  <div class="container">
+    <h2>Get a Free Quote</h2>
+    <p>Fill out the form below and we will get back to you shortly.</p>
+    <form action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </div>
+</section>
