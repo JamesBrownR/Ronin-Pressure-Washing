@@ -8,11 +8,29 @@ phone: "(954) 858-6702"
 phone_raw: "9548586702"
 address: "984 NW 127th Ave, Coral Springs, FL 33071"
 
+hours:
+  - day: "Monday"
+    time: "7:00 AM - 7:00 PM"
+  - day: "Tuesday"
+    time: "7:00 AM - 7:00 PM"
+  - day: "Wednesday"
+    time: "7:00 AM - 7:00 PM"
+  - day: "Thursday"
+    time: "7:00 AM - 7:00 PM"
+  - day: "Friday"
+    time: "7:00 AM - 7:00 PM"
+  - day: "Saturday"
+    time: "7:00 AM - 7:00 PM"
+  - day: "Sunday"
+    time: "7:00 AM - 7:00 PM"
+
 social:
   facebook: "https://www.facebook.com/profile.php?id=61576387686308"
   instagram: "https://www.instagram.com/roninpressurewashing/"
   tiktok: "https://www.tiktok.com/@roninp.w1"
   yelp: "https://www.yelp.com/biz/ronin-pressure-washing-lauderdale-lakes-2"
+
+google_maps_embed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d916539.2013412793!2d-81.10772398979441!3d26.189154536983626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xafa046fb3fde3dd%3A0x873afc2594c9f658!2sRonin%20Pressure%20Washing%20.LLC!5e0!3m2!1sen!2sus!4v1781835077655!5m2!1sen!2sus"
 
 formspree_id: "YOUR_FORMSPREE_ID"
 
