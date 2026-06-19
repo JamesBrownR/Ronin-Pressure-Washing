@@ -1,0 +1,32 @@
+title: "Ronin Pressure Washing"
+description: "Professional pressure washing and soft washing services for residential and commercial properties in South Florida."
+url: "https://yourusername.github.io"
+baseurl: "/ronin-pressure-washing"
+
+email: roninpw.llc@gmail.com
+phone: "(954) 858-6702"
+phone_raw: "9548586702"
+address: "984 NW 127th Ave, Coral Springs, FL 33071"
+
+social:
+  facebook: "https://www.facebook.com/profile.php?id=61576387686308"
+  instagram: "https://www.instagram.com/roninpressurewashing/"
+  tiktok: "https://www.tiktok.com/@roninp.w1"
+  yelp: "https://www.yelp.com/biz/ronin-pressure-washing-lauderdale-lakes-2"
+
+formspree_id: "YOUR_FORMSPREE_ID"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
