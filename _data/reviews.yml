@@ -1,1 +1,13 @@
+# Customer reviews
+# Add new entries in this format. Newest on top is recommended.
+- person: "Carlos M."
+  stars: 5
+  text: "Ozzy and his team made our driveway look brand new. Showed up on time and the price was fair. Highly recommend."
 
+- person: "Jennifer R."
+  stars: 5
+  text: "Great communication and the house looks amazing after the soft wash. Will be calling them again next year."
+
+- person: "Mike D."
+  stars: 5
+  text: "Fast, professional, and the pavers came out way better than I expected. Worth every penny."
