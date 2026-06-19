@@ -1,0 +1,25 @@
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img src="{{ '/Images/RPWLogo.webp' | relative_url }}" alt="Ronin Pressure Washing logo" class="brand-logo">
+      <span class="brand-name">Ronin Pressure Washing</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/services/' | relative_url }}">Services</a>
+      <a href="{{ '/services-areas/' | relative_url }}">Service Areas</a>
+      <a href="{{ '/gallery/' | relative_url }}">Gallery</a>
+      <a href="{{ '/reviews/' | relative_url }}">Reviews</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+      <a class="nav-cta" href="tel:{{ site.phone_raw }}">Call {{ site.phone }}</a>
+    </nav>
+  </div>
+</header>
