@@ -45,7 +45,22 @@ description: Professional pressure washing and soft washing for homes and busine
   </div>
 </div>
 
-<section>
+<section class="about-preview">
+  <div class="wrap">
+    <div class="about-preview__image">
+      <img src="{{ '/Images/RPWAbout.webp' | relative_url }}" alt="Ozzy from Ronin Pressure Washing soft washing a gutter and light fixture" loading="lazy">
+    </div>
+    <div class="about-preview__copy">
+      <div class="section-eyebrow">Who we are</div>
+      <h2>Quality work, every single time</h2>
+      <p>Ronin Pressure Washing was built on one idea: do the job right, even when no one is checking. Ozzy and the team treat every driveway, roof, and storefront like it's their own property, using the right pressure and the right method for each surface so you get a clean result without any damage.</p>
+      <p>No shortcuts, no upsells you don't need. Just a crew that shows up, gets it done, and leaves your property looking the way it should.</p>
+      <a class="view-all-link" href="{{ '/about/' | relative_url }}">More about Ronin {% include icon.html name="arrow-right" %}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section--alt">
   <div class="wrap">
     <div class="section-head">
       <div class="section-eyebrow">What we do</div>
@@ -55,38 +70,62 @@ description: Professional pressure washing and soft washing for homes and busine
 
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-card__icon">&#128167;</div>
+        <div class="service-card__icon">{% include icon.html name="driveway" %}</div>
         <h3>Driveway &amp; Paver Cleaning</h3>
         <p>Lift years of dirt, oil, and algae from concrete and pavers, and bring the original color back.</p>
       </div>
       <div class="service-card">
-        <div class="service-card__icon">&#127968;</div>
+        <div class="service-card__icon">{% include icon.html name="softwash" %}</div>
         <h3>Soft Washing</h3>
         <p>Low-pressure, detergent-based cleaning for siding, stucco, and roofs that removes mold without harming the surface.</p>
       </div>
       <div class="service-card">
-        <div class="service-card__icon">&#128230;</div>
+        <div class="service-card__icon">{% include icon.html name="gutter" %}</div>
         <h3>Gutter &amp; Fascia Cleaning</h3>
         <p>Clear out buildup and streaking along gutters and fascia boards so water flows the way it should.</p>
       </div>
       <div class="service-card">
-        <div class="service-card__icon">&#127970;</div>
+        <div class="service-card__icon">{% include icon.html name="commercial" %}</div>
         <h3>Commercial Properties</h3>
         <p>Storefronts, sidewalks, and shared spaces cleaned on a schedule that works around your business hours.</p>
       </div>
       <div class="service-card">
-        <div class="service-card__icon">&#128737;&#65039;</div>
+        <div class="service-card__icon">{% include icon.html name="roof" %}</div>
         <h3>Roof Cleaning</h3>
         <p>Remove black streaks and algae safely, extending the life of your roof and improving curb appeal.</p>
       </div>
       <div class="service-card">
-        <div class="service-card__icon">&#9971;&#65039;</div>
+        <div class="service-card__icon">{% include icon.html name="fence" %}</div>
         <h3>Fences &amp; Decks</h3>
         <p>Restore wood and vinyl fencing, decks, and patios so outdoor spaces look like they're ready for guests.</p>
       </div>
     </div>
 
-    <a class="view-all-link" href="{{ '/services/' | relative_url }}">See all services &rarr;</a>
+    <a class="view-all-link" href="{{ '/services/' | relative_url }}">See all services {% include icon.html name="arrow-right" %}</a>
+  </div>
+</section>
+
+<section class="area-preview">
+  <div class="wrap">
+    <div>
+      <div class="section-head">
+        <div class="section-eyebrow">Where we work</div>
+        <h2>Proudly serving South Florida</h2>
+        <p>Based in Coral Springs, our crew covers cities and neighborhoods across Broward County. Don't see your area listed? Give us a call, there's a good chance we cover it.</p>
+      </div>
+
+      <ul class="area-list">
+        {% for area in site.data.service_areas %}
+        <li>{% include icon.html name="map-pin" %}{{ area.name }}</li>
+        {% endfor %}
+      </ul>
+
+      <a class="view-all-link" href="{{ '/services-areas/' | relative_url }}">View all service areas {% include icon.html name="arrow-right" %}</a>
+    </div>
+
+    <div class="area-preview__map">
+      <iframe src="{{ site.google_maps_embed }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </div>
 </section>
 
@@ -108,7 +147,7 @@ description: Professional pressure washing and soft washing for homes and busine
       {% endfor %}
     </div>
 
-    <a class="view-all-link" href="{{ '/gallery/' | relative_url }}">View full gallery &rarr;</a>
+    <a class="view-all-link" href="{{ '/gallery/' | relative_url }}">View full gallery {% include icon.html name="arrow-right" %}</a>
   </div>
 </section>
 
@@ -135,7 +174,65 @@ description: Professional pressure washing and soft washing for homes and busine
     </div>
 
     <div class="text-center">
-      <a class="view-all-link" href="{{ '/reviews/' | relative_url }}">Read all reviews &rarr;</a>
+      <a class="view-all-link" href="{{ '/reviews/' | relative_url }}">Read all reviews {% include icon.html name="arrow-right" %}</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Get in touch</div>
+      <h2>Request your free estimate</h2>
+      <p>Tell us a bit about the job and we'll get back to you with pricing, usually the same day.</p>
+    </div>
+
+    <div class="contact-layout">
+      <form class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        <div class="form-row">
+          <label for="home-name">Name</label>
+          <input type="text" id="home-name" name="name" required>
+        </div>
+        <div class="form-row">
+          <label for="home-phone">Phone</label>
+          <input type="tel" id="home-phone" name="phone" required>
+        </div>
+        <div class="form-row">
+          <label for="home-email">Email</label>
+          <input type="email" id="home-email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="home-service">Service needed</label>
+          <select id="home-service" name="service">
+            <option value="">Select a service</option>
+            <option value="Driveway & Paver Cleaning">Driveway &amp; Paver Cleaning</option>
+            <option value="Soft Washing">Soft Washing</option>
+            <option value="Gutter & Fascia Cleaning">Gutter &amp; Fascia Cleaning</option>
+            <option value="Commercial Property">Commercial Property</option>
+            <option value="Roof Cleaning">Roof Cleaning</option>
+            <option value="Fences & Decks">Fences &amp; Decks</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="home-message">Message</label>
+          <textarea id="home-message" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Send request</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>Contact details</h3>
+        <ul>
+          <li>{% include icon.html name="phone" %}<a href="tel:{{ site.phone_raw }}">{{ site.phone }}</a></li>
+          <li>{% include icon.html name="mail" %}<a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li>{% include icon.html name="map-pin" %}{{ site.address }}</li>
+        </ul>
+
+        <div class="map-frame">
+          <iframe src="{{ site.google_maps_embed }}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
     </div>
   </div>
 </section>
