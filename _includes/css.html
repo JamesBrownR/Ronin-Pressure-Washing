@@ -224,31 +224,47 @@ p {
 }
 
 @media (max-width: 860px) {
+  .site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow: visible; /* allow dropdown to escape, but anchor it */
+  }
+
   .site-nav__links {
     display: none;
   }
+
   .site-nav__cta {
     display: none;
   }
+
   .nav-toggle {
     display: block;
   }
+
   .site-nav.is-open .site-nav__links {
     display: flex;
     flex-direction: column;
     gap: 0;
-    position: absolute;
-    top: 100%;
+    position: fixed;       /* ← fixed instead of absolute */
+    top: 66px;             /* ← match your nav bar height */
     left: 0;
     right: 0;
+    width: 100vw;          /* ← full viewport width */
     background: var(--white);
     border-bottom: 1px solid var(--concrete-dim);
     padding: 8px 24px 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    z-index: 99;
   }
+
   .site-nav.is-open .site-nav__links a {
     padding: 12px 0;
     border-bottom: 1px solid var(--concrete-dim);
+    display: block;
   }
+
   .site-nav.is-open .site-nav__cta {
     display: block;
     margin: 12px 24px 16px;
